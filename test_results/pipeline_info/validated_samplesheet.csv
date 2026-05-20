@@ -1,0 +1,4 @@
+group,sample,bam
+g1,test1,/Users/cmiller/projects/nanopore/workflow/testing/inputs/test1.bam
+g1,test2,/Users/cmiller/projects/nanopore/workflow/testing/inputs/test2.bam
+g2,test3,/Users/cmiller/projects/nanopore/workflow/testing/inputs/test3.bam

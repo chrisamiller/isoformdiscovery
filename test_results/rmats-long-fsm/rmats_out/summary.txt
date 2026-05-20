@@ -1,0 +1,5 @@
+## significant differential transcript usage
+total significant isoforms: 0
+total genes with significant isoforms: 0
+adjusted pvalue threshold: 0.1
+delta isoform proportion threshold: 0.1

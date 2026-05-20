@@ -1,0 +1,7 @@
+group,sample,bam
+g1,AML_1,/storage1/data/aml_study/AML_1.bam
+g1,AML_2,/storage1/data/aml_study/AML_2.bam
+g1,AML_3,/storage1/data/aml_study/AML_3.bam
+g2,HSC_1,/storage1/data/aml_study/HSC_1.bam
+g2,HSC_2,/storage1/data/aml_study/HSC_2.bam
+g2,HSC_3,/storage1/data/aml_study/HSC_3.bam
