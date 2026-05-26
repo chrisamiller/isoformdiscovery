@@ -1,5 +1,8 @@
 # transcript_assembly
 
+** WORK IN PROGRESS - check back often for updates **
+
+
 Nextflow DSL2 pipeline for **Nanopore cDNA transcript discovery, quantification, and differential isoform analysis**.
 
 The pipeline takes per-sample minimap2-aligned BAM files, runs ESPRESSO for transcript detection and quantification, filters the resulting transcript set with SQANTI3, re-quantifies against the filtered transcripts, normalizes to CPM, and reports differential isoform usage with rMATS-long.
@@ -284,7 +287,7 @@ All tools run inside Docker containers. No local installation is needed beyond N
 
 ---
 
-## Running on WUSTL RIS
+## Running on Local LSF cluster
 
 ### 1. Set up a job group
 
@@ -340,10 +343,10 @@ tail -f .nextflow.log
 tail -f results/pipeline_info/execution_trace.txt
 ```
 
-### Notes for RIS
+### Notes for running on an LSF cluster:
 
 - The Nextflow head job itself should request at least 8 GB RAM — it holds all channel state in memory.
-- Use a dedicated scratch volume (not `/tmp`) for `--espresso_scratch`; RIS `/scratch1` is suitable.
+- Use a dedicated scratch volume (not `/tmp`) for `--espresso_scratch` - it must be persistent across jobs.
 - If jobs fail with out-of-memory errors, increase the relevant resource label in `conf/base.config` or override via `--max_memory`.
 - SQANTI3 processes activate a conda environment inside the container (`source activate SQANTI3.env`). If the environment path changes in a new image, update `SQANTI3_QC.nf` and `SQANTI3_FILTER.nf`.
 
